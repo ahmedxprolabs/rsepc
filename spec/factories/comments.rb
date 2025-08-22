@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :comment do
-    user { nil }
-    post { nil }
-    content { "MyText" }
+    association :user
+    association :post
+    content { Faker::Lorem.sentence }
   end
 end
